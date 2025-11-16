@@ -21,7 +21,7 @@ class PlanScreen extends StatelessWidget {
         context,
         'UNLIMITED FREE \nTRIAL',
         textStyle: TextStyleType.subHeading,
-        color: AppColors.kGreyColor
+        color: AppColors.kGreyColor,
       ),
 
       Uiutils.getTextWidget(
@@ -47,25 +47,31 @@ class PlanScreen extends StatelessWidget {
           ),
           Expanded(
             child: ListView.builder(
-              scrollDirection: Axis.vertical,
-              itemBuilder: (context, index) => Container(
-                decoration: BoxDecoration(
-                  shape: BoxShape.rectangle,
-                  borderRadius: BorderRadius.circular(10.rf(context)),
+              itemCount: 4,
+              scrollDirection: Axis.horizontal,
+              itemBuilder: (context, index) => Padding(
+                padding: EdgeInsets.only(right: 10.rw(context)),
+                child: Container(
+                  width: 50.rw(context),
+                  decoration: BoxDecoration(
+                    color: CupertinoColors.transparent,
+                    shape: BoxShape.rectangle,
+                    borderRadius: BorderRadius.circular(10.rf(context)),
 
-                  border: Border.all(
-                    color: AppColors.kDarkBlue,
-                    width: 4.rw(context),
-                  ),
-
-                  boxShadow: [
-                    BoxShadow(
+                    border: Border.all(
                       color: AppColors.kLightBlue,
-                      blurRadius: 10.rf(context),
-                      spreadRadius: 2.rf(context),
-                      offset: const Offset(0, 0),
+                      width: 4.rw(context),
                     ),
-                  ],
+
+                    boxShadow: [
+                      BoxShadow(
+                        // color: AppColors.kLightBlue,
+                        blurRadius: 10.rf(context),
+                        spreadRadius: 2.rf(context),
+                        offset: const Offset(0, 0),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -137,7 +143,7 @@ class PlanScreen extends StatelessWidget {
                   onTap: () => context.pushNamed(RouteNames.feedback),
                   child: Container(
                     padding: EdgeInsets.all(10.rf(context)),
-                    height: 90.rh(context),
+                    height: 100.rh(context),
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: listCards[index],

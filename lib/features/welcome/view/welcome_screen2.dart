@@ -15,7 +15,7 @@ class WelcomeScreen2 extends StatelessWidget {
     return CustomFrameWidget(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        spacing: 30.rh(context),
+        spacing: 28.rh(context),
         children: [
           SizedBox(height: 40.rh(context)),
           Uiutils.getTextWidget(context, '''SLEEP ME CAN HEAL... 
@@ -76,11 +76,12 @@ POWERFUL SLEEP SOLUTION THAT IS NOW OFFERED HERE:''',
                 context,
                 '''ACCEPT THE TERMS \nAND CONDITIONS AND \nPRIVACY POLICY. *.''',
                 textStyle: TextStyleType.largeBold,
+                fs: 14.rf(context),
                 color: AppColors.kWhite,
               ),
             ],
           ),
-          SizedBox(height: 20.rh(context)),
+          SizedBox(height: 10.rh(context)),
         ],
       ),
     );

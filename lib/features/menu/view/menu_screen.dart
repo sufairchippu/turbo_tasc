@@ -59,7 +59,7 @@ class MenuScreen extends StatelessWidget {
               onTap: () => context.pushNamed(RouteNames.welcome),
               child: Container(
                 padding: EdgeInsets.all(10.rf(context)),
-                height: 90.rh(context),
+                height: 100.rh(context),
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
